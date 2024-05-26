@@ -108,7 +108,7 @@ language_codes = {
 
 class FasterWhisperASR:
     def __init__(self):
-        model_size = "large_v3"
+        model_size = "medium"
         self.asr_pipeline = WhisperModel(model_size, device="auto", compute_type="auto")
 
     async def transcribe(self, client):

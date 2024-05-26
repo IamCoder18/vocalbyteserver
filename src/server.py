@@ -49,13 +49,15 @@ class Server:
             del self.connected_clients[client_id]
 
     def start(self):
-        self.certfile = "./localhost.pem"
-        self.keyfile = "./localhost-key.pem"
-        if self.certfile:
-            ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-            ssl_context.load_cert_chain(certfile=self.certfile, keyfile=self.keyfile)
-            print(f"WebSocket server ready to accept secure connections on wss://{self.host}:{self.port}")
-            return websockets.serve(self.handle_websocket, self.host, self.port, ssl=ssl_context)
-        else:
-            print(f"WebSocket server ready to accept unsecure connections on ws://{self.host}:{self.port}")
-            return websockets.serve(self.handle_websocket, self.host, self.port)
+        # self.certfile = "./localhost.pem"
+        # self.keyfile = "./localhost-key.pem"
+        # if self.certfile:
+        #     ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+        #     ssl_context.load_cert_chain(certfile=self.certfile, keyfile=self.keyfile)
+        #     print(f"WebSocket server ready to accept secure connections on wss://{self.host}:{self.port}")
+        #     return websockets.serve(self.handle_websocket, self.host, self.port, ssl=ssl_context)
+        # else:
+        #     print(f"WebSocket server ready to accept unsecure connections on ws://{self.host}:{self.port}")
+        #     return websockets.serve(self.handle_websocket, self.host, self.port)
+        print(f"WebSocket server ready!")
+        return websockets.serve(self.handle_websocket, self.host, self.port)
