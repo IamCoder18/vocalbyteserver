@@ -5,3 +5,4 @@ asyncio~=3.4.3
 sentence-transformers
 transformers
 faster-whisper
+gunicorn
