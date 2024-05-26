@@ -1,4 +1,4 @@
-from src.buffering_strategies import SilenceAtEndOfChunk
+from buffering_strategies import SilenceAtEndOfChunk
 
 class Client:
     def __init__(self, client_id, sampling_rate, samples_width):

@@ -2,7 +2,7 @@ import json
 import ssl
 import uuid
 import websockets
-from src.client import Client
+from client import Client
 
 
 class Server:

@@ -5,7 +5,7 @@ from pyannote.core import Segment
 from pyannote.audio import Model
 from pyannote.audio.pipelines import VoiceActivityDetection
 
-from src.audio_utils import save_audio_to_file
+from audio_utils import save_audio_to_file
 
 
 class PyannoteVAD():

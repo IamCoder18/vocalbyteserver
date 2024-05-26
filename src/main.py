@@ -1,7 +1,7 @@
 import asyncio
 from server import Server
-from src.faster_whisper_asr import FasterWhisperASR
-from src.pyannote_vad import PyannoteVAD
+from faster_whisper_asr import FasterWhisperASR
+from pyannote_vad import PyannoteVAD
 
 
 def main():
