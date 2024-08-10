@@ -109,7 +109,7 @@ language_codes = {
 class FasterWhisperASR:
     def __init__(self):
         model_size = "medium"
-        self.asr_pipeline = WhisperModel(model_size, device="auto", compute_type="auto")
+        self.asr_pipeline = WhisperModel(model_size, device="auto", compute_type="auto", task="translate")
 
     async def transcribe(self, client):
         file_path = await save_audio_to_file(client.scratch_buffer, client.get_file_name())
