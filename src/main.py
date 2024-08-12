@@ -10,7 +10,7 @@ def main():
 
     server = Server(vad_pipeline, asr_pipeline, host="0.0.0.0", port=4000, sampling_rate=16000, samples_width=2)
 
-    print("Websocket URL: 127.0.0.1:4000")
+    print("Websocket URL: ws://127.0.0.1:4000")
 
     asyncio.get_event_loop().run_until_complete(server.start())
     asyncio.get_event_loop().run_forever()
